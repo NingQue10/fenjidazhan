@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*背景*/
+#mainScreen{
+    width: 512px;
+    height: 768px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.bg{
+    width: 512px;
+    height: 768px;
+    position: absolute;
+    background-image: url("../img/bg.jpg");
+}
+#bg2{
+    top:-768px;
+}
+
+/*飞机*/
+#airplane{
+    width: 140px;
+    height: 178px;
+    background-image: url("../img/airplane.png");
+    position: absolute;
+    left: 200px;
+    top: 550px;
+}
+/*子弹*/
+.bulled{
+    position: absolute;
+    width: 5px;
+    height: 18px;
+    background-image: url("../img/Bullet.png");
+    background-size: 5px 10px;
+}
+/*敌人*/
+.enemy{
+    position: absolute;
+    width: 36px;
+    height: 37px;
+    background-image: url("../img/enemy.png");
+}
