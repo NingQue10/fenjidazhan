@@ -33,7 +33,7 @@
 .bulled{
     position: absolute;
     width: 5px;
-    height: 18px;
+    height: 10px;
     background-image: url("../img/Bullet.png");
     background-size: 5px 10px;
 }

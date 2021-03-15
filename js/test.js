@@ -70,11 +70,12 @@ var timerEnemy = setInterval(function () {
     },50)
     enemy.timer= timerEnemyFly;
 },500)
+//消灭敌人
 var timerCollisionDetection = setInterval(function () {
     var allEnemy = document.getElementsByClassName('enemy');
     var allBullet = document.getElementsByClassName('bulled');
     for (var i=0;i<allBullet.length;i++){
-        for(var j=0;i<allEnemy.length;j++){
+        for(var j=0;j<allEnemy.length;j++){
             var b= allBullet[i];
             var e=allEnemy[j];
             if(collisionDetection(b,e)){
