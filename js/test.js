@@ -14,7 +14,6 @@ var timerBg=setInterval(function () {
         jsBg2.style.top= -768 +'px';
     }
 },5)
-
 //让飞机动起来
 //拖拽效果
 var airplane = document.getElementById('airplane');
