@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS3实现旋转立方体</title>
+        <style type="text/css">
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .box{
+                width: 400px;
+                height: 400px;
+                position: absolute;
+                margin:auto;          /*将四周边距都设为auto自动*/
+                left: 0;              /*离包含元素的距离均设为零*/
+                right: 0;
+                top: 0;
+                bottom: 0;
+                perspective: 600px;
+            }
+            .box ul{
+                width: 300px;
+                height: 300px;
+                border: 1px solid blue;
+                margin: auto;
+                position: relative;
+                transform-style: preserve-3d;
+                animation: move 2s infinite linear;
+                transform-origin:center center -150px;
+            }
+            .box ul li{
+                width: 300px;
+                height: 300px;
+                list-style: none;
+                font-size: 30px;
+                color: white;
+                text-align: center;
+                line-height: 300px;
+                position: absolute;
+            }
+            .box ul li:nth-of-type(1){background: red;opacity: 0.4;}
+            .box ul li:nth-of-type(2){
+                background: green;
+                opacity: 0.4;
+                transform: translateX(300px)rotateY(90deg);
+                transform-origin: left;
+            }
+            .box ul li:nth-of-type(3){
+                background: yellow;
+                opacity: 0.4;
+                transform: translateX(-300px)rotateY(-90deg);
+                transform-origin: right;
+            }
+            .box ul li:nth-of-type(4){
+                background: peru;
+                opacity: 0.4;
+                transform: translateY(-300px)rotateX(90deg);
+                transform-origin: bottom;
+            }
+            .box ul li:nth-of-type(5){
+                background: orange;
+                opacity: 0.4;
+                transform: translateY(300px)rotateX(-90deg);
+                transform-origin: top;
+            }
+            .box ul li:nth-of-type(6){
+                background: blue;
+                opacity: 0.4;
+                transform: translateZ(-300px);
+            }
+            @keyframes move {
+                from{transform: rotateY(0deg);}
+                to{transform: rotateY(360deg)}
+            }
+        </style>
+    </head>
+    <body>
+    <div class="box">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+    </div>
+    </body>
+</html>
